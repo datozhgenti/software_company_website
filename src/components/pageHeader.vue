@@ -1,5 +1,8 @@
 <template>
-  <header class="bg-white nav-box-shadow flex space-between align-center fixed">
+  <header
+    class="bg-white nav-box-shadow flex space-between align-center fixed"
+    ref="header"
+  >
     <div class="icon-wrapper">
       <a href="#" class="block">
         <img
@@ -18,11 +21,34 @@
         </li>
       </ul>
     </nav>
+
+    <nav
+      class="mobile-nav fixed text-align-center mobile-nav-box-shadow bg-white absolute"
+      ref="mobileNav"
+    >
+      <ul ref="mobileUL">
+        <li v-for="link of links" :key="link">
+          <a :href="link.href" class="gray-700 font-medium block">{{
+            link.name
+          }}</a>
+        </li>
+      </ul>
+    </nav>
+
     <div class="burger-image-wrapper justify-end">
       <img
+        src="@/assets/icons/close.svg"
+        alt="navigation close icon"
+        class="close-icon block"
+        @click="closeNav"
+        v-if="mobileNavOn"
+      />
+      <img
+        v-else
         src="@/assets/icons/burger.svg"
         alt="burder icon"
         class="burger-icon block"
+        @click="openNav"
       />
     </div>
 
@@ -44,7 +70,26 @@ export default {
         { name: "How it Works", href: "#" },
         { name: "Hire", href: "#" },
       ],
+      mobileNavOn: false,
+      mobileNav: null,
     };
+  },
+  mounted() {
+    this.mobileNav = this.$refs.mobileNav;
+    const headerHeight = this.$refs.header.offsetHeight / 16;
+    this.mobileNav.style.top = `${headerHeight}rem`;
+  },
+  methods: {
+    openNav() {
+      this.mobileNavOn = true;
+      const mobileNavHeight = this.$refs.mobileUL.offsetHeight / 16;
+      this.mobileNav.style.height = `${mobileNavHeight}rem`;
+    },
+
+    closeNav() {
+      this.mobileNavOn = false;
+      this.mobileNav.style.height = "0";
+    },
   },
 };
 </script>
@@ -55,6 +100,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
 }
 
 .brand-icon {
@@ -87,7 +133,8 @@ button {
   padding: 1.08813rem 2.07881rem 1.06794rem 0.89675rem;
 }
 
-.burger-icon {
+.burger-icon,
+.close-icon {
   width: 2.625rem;
   height: 2.625rem;
 }
@@ -97,9 +144,29 @@ button {
   order: 1;
 }
 
+.mobile-nav {
+  width: 100vw;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 1s;
+}
+
+.mobile-nav a {
+  display: inline-block;
+}
+
+.mobile-nav li {
+  margin-bottom: 0.625rem;
+}
+
 @media (max-width: 45.9375rem) {
   .desktop-nav {
     display: none;
+  }
+
+  .mobile-nav {
+    display: block;
   }
 
   .burger-image-wrapper {
@@ -114,6 +181,12 @@ button {
 
   button {
     margin: 0 0.3125rem 0 0;
+  }
+}
+
+@media (min-width: 45.9375rem) {
+  .mobile-nav {
+    display: none;
   }
 }
 </style>
