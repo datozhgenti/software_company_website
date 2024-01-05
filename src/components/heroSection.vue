@@ -29,6 +29,11 @@
         />
       </div>
     </div>
+    <img
+      src="@/assets/images/ellipse-180.svg"
+      alt="ellipse"
+      class="ellipse absolute z-index--1"
+    />
   </section>
 </template>
 
@@ -86,6 +91,13 @@ img.hero-img {
 
 .hero-content {
   max-width: 71.6rem;
+}
+
+.ellipse {
+  bottom: -2.25rem;
+  left: 33.5%;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 @media (max-width: 74.375rem) {

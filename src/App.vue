@@ -2,12 +2,14 @@
   <pageHeader></pageHeader>
   <main>
     <heroSection></heroSection>
+    <servicesSection></servicesSection>
   </main>
 </template>
 
 <script setup>
 import pageHeader from "./components/pageHeader.vue";
 import heroSection from "./components/heroSection.vue";
+import servicesSection from "./components/servicesSection.vue";
 </script>
 
 <style>
@@ -18,6 +20,11 @@ import heroSection from "./components/heroSection.vue";
   --Gray-gray-700: #4a5568;
   --Gray-gray-50: #fafafa;
   --Gray-gray-900: #1a202c;
+  --Gray-gray-800: #2d3748;
+  --Shade-light-background: #f9f9ff;
+  --Gray-gray-600: #718096;
+  --Gradient-Primary-bg: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  --Gray-gray-400: #cbd5e0;
 }
 
 /* all element styles */
@@ -35,6 +42,10 @@ import heroSection from "./components/heroSection.vue";
 
 .bg-white {
   background: var(--base-white);
+}
+
+.bg-shade-light {
+  background: var(--Shade-light-background);
 }
 
 /* box shadows */
@@ -77,6 +88,10 @@ import heroSection from "./components/heroSection.vue";
   align-items: center;
 }
 
+.align-start {
+  align-items: flex-start;
+}
+
 /* list */
 
 ul {
@@ -105,12 +120,20 @@ a {
 
 /* color */
 
+.gray-50 {
+  color: var(--Gray-gray-50);
+}
+
+.gray-600 {
+  color: var(--Gray-gray-600);
+}
+
 .gray-700 {
   color: var(--Gray-gray-700);
 }
 
-.gray-50 {
-  color: var(--Gray-gray-50);
+.gray-800 {
+  color: var(--Gray-gray-800);
 }
 
 .gray-900 {
@@ -211,5 +234,23 @@ button:focus {
 
 .center-margin {
   margin: 0 auto;
+}
+
+/* z-index */
+
+.z-index--1 {
+  z-index: -1;
+}
+
+/* border radius */
+
+.border-circle {
+  border-radius: 50%;
+}
+
+/* overflow-hidden */
+
+.overflow-hidden {
+  overflow: hidden;
 }
 </style>
