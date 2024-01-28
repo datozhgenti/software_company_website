@@ -10,16 +10,28 @@
         </div>
         <nav class="desktop-nav">
           <ul class="flex space-between">
-            <li><a class="headings-h6 capitalize" href="#"> About us</a></li>
-            <li><a class="headings-h6 capitalize" href="#"> Services</a></li>
             <li>
-              <a class="headings-h6 capitalize" href="#"> Case Studies</a>
+              <a class="headings-h6 gray-700 capitalize" href="#"> About us</a>
             </li>
-            <li><a class="headings-h6 capitalize" href="#"> Blog</a></li>
             <li>
-              <a class="headings-h6 capitalize" href="#"> How it Works</a>
+              <a class="headings-h6 gray-700 capitalize" href="#"> Services</a>
             </li>
-            <li><a class="headings-h6 capitalize" href="#"> Hire</a></li>
+            <li>
+              <a class="headings-h6 gray-700 capitalize" href="#">
+                Case Studies</a
+              >
+            </li>
+            <li>
+              <a class="headings-h6 gray-700 capitalize" href="#"> Blog</a>
+            </li>
+            <li>
+              <a class="headings-h6 gray-700 capitalize" href="#">
+                How it Works</a
+              >
+            </li>
+            <li>
+              <a class="headings-h6 gray-700 capitalize" href="#"> Hire</a>
+            </li>
           </ul>
         </nav>
         <div class="burger-icon-wrapper justify-end display-none">
@@ -50,16 +62,28 @@
     ref="mobileNav"
   >
     <ul>
-      <li><a class="headings-h6 capitalize inline" href="#"> About us</a></li>
-      <li><a class="headings-h6 capitalize inline" href="#"> Services</a></li>
       <li>
-        <a class="headings-h6 capitalize inline" href="#"> Case Studies</a>
+        <a class="headings-h6 gray-700 capitalize inline" href="#"> About us</a>
       </li>
-      <li><a class="headings-h6 capitalize inline" href="#"> Blog</a></li>
       <li>
-        <a class="headings-h6 capitalize inline" href="#"> How it Works</a>
+        <a class="headings-h6 gray-700 capitalize inline" href="#"> Services</a>
       </li>
-      <li><a class="headings-h6 capitalize inline" href="#"> Hire</a></li>
+      <li>
+        <a class="headings-h6 gray-700 capitalize inline" href="#">
+          Case Studies</a
+        >
+      </li>
+      <li>
+        <a class="headings-h6 gray-700 capitalize inline" href="#"> Blog</a>
+      </li>
+      <li>
+        <a class="headings-h6 gray-700 capitalize inline" href="#">
+          How it Works</a
+        >
+      </li>
+      <li>
+        <a class="headings-h6 gray-700 capitalize inline" href="#"> Hire</a>
+      </li>
     </ul>
   </nav>
 </template>

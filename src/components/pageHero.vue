@@ -5,7 +5,7 @@
         class="hero-section-content flex justify-center align-center relative"
       >
         <div class="left">
-          <h1 class="lite-h1">
+          <h1 class="lite-h1 gray-900">
             Great
             <span class="product bg-clip-text transparent inter-700"
               >Product</span
@@ -13,7 +13,7 @@
             <span class="build inter-800"> is built by great</span>
             <span class="teams inter-800 bg-clip-text transparent"> teams</span>
           </h1>
-          <p class="default-lg">
+          <p class="default-lg gray-700">
             We help build and manage a team of world-class developers to bring
             your vision to life
           </p>
@@ -98,6 +98,14 @@ p {
   .hero-section-content {
     flex-wrap: wrap;
     row-gap: 1.5rem;
+  }
+
+  .right {
+    order: -1;
+  }
+
+  .hero-image {
+    height: auto;
   }
 }
 
